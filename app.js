@@ -4,7 +4,6 @@ const expressLayout = require('express-ejs-layouts');
 const mongoose = require('mongoose');
 const session = require('express-session');
 const flash = require('connect-flash');
-const router2 = require('./routes/users');
 var methodOverride = require('method-override')
 
 
@@ -44,7 +43,6 @@ app.use(express.urlencoded({extended:false}))
 app.use(expressLayout);
 app.set('view engine', 'ejs');
 app.use('/',router1);
-app.use('/users', router2);
 
 
 
